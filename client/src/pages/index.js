@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
 
@@ -9,8 +9,11 @@ import Projects from '../sections/projects.js'
 import Experience from '../sections/experience.js'
 import Tech from '../sections/tech.js'
 
+import { GlobalStyle } from '../styles/GlobalStyles.js'
+
 const IndexPage = () => (
   <>
+    <GlobalStyle />
     <Jumbo />
     <Layout>
       <About />
