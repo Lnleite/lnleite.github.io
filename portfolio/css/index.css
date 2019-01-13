@@ -129,3 +129,43 @@ html {
   font-size: 100%;
   font-family: "Roboto", "Helvetica";
 }
+.container {
+  margin: 0 auto;
+  max-width: 800px;
+}
+.navigation {
+  width: 100%;
+  background: #a66429;
+}
+.navigation nav {
+  max-width: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 50px;
+}
+.navigation nav a {
+  color: #ffffff;
+  text-decoration: none;
+}
+header {
+  position: relative;
+}
+header .jumboImg {
+  background-image: url(../images/compressImg.jpg);
+  filter: blur(2px);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 500px;
+}
+header .loaded {
+  filter: blur(0px);
+}
+header .jumboTxt {
+  position: absolute;
+  top: 40%;
+  left: 35%;
+  color: #ffffff;
+}
