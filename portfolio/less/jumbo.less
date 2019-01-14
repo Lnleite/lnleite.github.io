@@ -1,5 +1,6 @@
 header {
   position: relative;
+  min-height: 830px;
 
   .jumboImg {
     background-image: url(../images/jumboImg.jpg);
@@ -7,12 +8,13 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    min-height: 500px;
+    min-height: 830px;
 
-    transition: background-image 1s ease;
+    transition: background-image 1s ease, filter 1s ease;
   }
 
   .loading {
+    background-color: #2e69b7;
     background-image: url(../images/compressImg.jpg);
     filter: blur(0px);
   }
