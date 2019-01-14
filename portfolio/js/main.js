@@ -1,3 +1,5 @@
 let jumboImg = document.querySelector(".jumboImg");
 
-jumboSrc = "../images/jumboPic.jpg";
+window.addEventListener("load", function() {
+  jumboImg.classList.remove("loading");
+});

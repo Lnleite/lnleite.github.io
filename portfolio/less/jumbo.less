@@ -2,11 +2,19 @@ header {
   position: relative;
 
   .jumboImg {
-    background-image: url(../images/jumboPic.jpg);
+    background-image: url(../images/jumboImg.jpg);
+    filter: none;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     min-height: 500px;
+
+    transition: background-image 1s ease;
+  }
+
+  .loading {
+    background-image: url(../images/compressImg.jpg);
+    filter: blur(0px);
   }
 
   .jumboTxt {

@@ -153,14 +153,16 @@ header {
   position: relative;
 }
 header .jumboImg {
-  background-image: url(../images/compressImg.jpg);
-  filter: blur(2px);
+  background-image: url(../images/jumboImg.jpg);
+  filter: none;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   min-height: 500px;
+  transition: background-image 1s ease;
 }
-header .loaded {
+header .loading {
+  background-image: url(../images/compressImg.jpg);
   filter: blur(0px);
 }
 header .jumboTxt {
