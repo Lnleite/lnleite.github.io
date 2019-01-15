@@ -1,6 +1,8 @@
 .navigation {
+  position: fixed;
   width: 100%;
   background: #a66429;
+  z-index: 10;
 
   nav {
     max-width: 800px;
@@ -11,6 +13,12 @@
     a {
       color: #ffffff;
       text-decoration: none;
+      transition: border-bottom 1s ease;
+
+      &:hover {
+        // color: @GraySlate;
+        border-bottom: 1px dashed;
+      }
     }
   }
 }

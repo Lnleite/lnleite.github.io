@@ -134,8 +134,10 @@ html {
   max-width: 800px;
 }
 .navigation {
+  position: fixed;
   width: 100%;
   background: #a66429;
+  z-index: 10;
 }
 .navigation nav {
   max-width: 800px;
@@ -148,6 +150,10 @@ html {
 .navigation nav a {
   color: #ffffff;
   text-decoration: none;
+  transition: border-bottom 1s ease;
+}
+.navigation nav a:hover {
+  border-bottom: 1px dashed;
 }
 header {
   position: relative;
