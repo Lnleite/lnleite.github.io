@@ -129,6 +129,9 @@ html {
   font-size: 100%;
   font-family: "Roboto", "Helvetica";
 }
+body {
+  background: #516481;
+}
 .container {
   margin: 0 auto;
   max-width: 800px;
@@ -178,4 +181,59 @@ header .jumboTxt {
   top: 40%;
   left: 35%;
   color: #ffffff;
+}
+.home section {
+  min-height: 200px;
+}
+.home #about,
+.home #experience {
+  background: #cfc7bb;
+}
+.home #projects,
+.home #tech {
+  background: #467bbb;
+}
+.home #projects .projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+}
+.home #projects .projects .project {
+  position: relative;
+  max-width: 150px;
+  margin-bottom: 40px;
+  background: #494747;
+  box-shadow: 1px 1px 7px black;
+  transition: background 0.5s ease;
+}
+.home #projects .projects .project:hover {
+  background: #000000;
+}
+.home #projects .projects .project a {
+  text-decoration: none;
+  color: black;
+}
+.home #projects .projects .project img {
+  width: 100%;
+  opacity: 0.7;
+  height: 100%;
+}
+.home #projects .projects .project .info {
+  position: absolute;
+  top: 40px;
+  left: 18%;
+  color: white;
+}
+.home #projects .projects .project .skills {
+  opacity: 0;
+  display: flex;
+  flex-wrap: wrap;
+  transition: opacity 0.5s ease;
+}
+.home #projects .projects .project .skills p {
+  background: #424242;
+}
+.home #projects .projects .project:hover .skills {
+  opacity: 1;
 }

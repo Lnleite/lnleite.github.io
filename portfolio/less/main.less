@@ -1,2 +1,70 @@
 .home {
+  section {
+    min-height: 200px;
+  }
+
+  #about,
+  #experience {
+    background: @bannerAlt;
+  }
+
+  #projects,
+  #tech {
+    background: @bannerOALt;
+  }
+
+  #projects {
+    .projects {
+      .center();
+      justify-content: space-around;
+
+      .project {
+        position: relative;
+        max-width: 150px;
+        margin-bottom: 40px;
+        background: rgb(73, 71, 71);
+        box-shadow: 1px 1px 7px black;
+
+        transition: background 0.5s ease;
+
+        &:hover {
+          background: rgb(0, 0, 0);
+        }
+
+        a {
+          text-decoration: none;
+          color: black;
+        }
+
+        img {
+          width: 100%;
+          opacity: 0.7;
+          height: 100%;
+        }
+
+        .info {
+          position: absolute;
+          top: 40px;
+          left: 18%;
+          color: white;
+        }
+
+        .skills {
+          opacity: 0;
+          display: flex;
+          flex-wrap: wrap;
+
+          p {
+            background: rgb(66, 66, 66);
+          }
+
+          transition: opacity 0.5s ease;
+        }
+
+        &:hover .skills {
+          opacity: 1;
+        }
+      }
+    }
+  }
 }
