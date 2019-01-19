@@ -131,6 +131,7 @@ html {
 }
 body {
   background: #516481;
+  line-height: 1.4;
 }
 .container {
   margin: 0 auto;
@@ -183,7 +184,8 @@ header .jumboTxt {
   color: #ffffff;
 }
 .home section {
-  min-height: 200px;
+  min-height: 450px;
+  padding: 60px 0;
 }
 .home #about,
 .home #experience {
@@ -221,19 +223,34 @@ header .jumboTxt {
 }
 .home #projects .projects .project .info {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   top: 40px;
-  left: 18%;
   color: white;
 }
 .home #projects .projects .project .skills {
   opacity: 0;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 5px;
   transition: opacity 0.5s ease;
 }
 .home #projects .projects .project .skills p {
   background: #424242;
+  padding: 2px 2%;
+  margin: 5px 2%;
 }
 .home #projects .projects .project:hover .skills {
   opacity: 1;
+}
+.home #tech .icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.home #tech .icons svg {
+  width: 15%;
+  margin: 0 1%;
 }
