@@ -180,8 +180,15 @@ header .loading {
 header .jumboTxt {
   position: absolute;
   top: 40%;
-  left: 35%;
+  left: 15%;
   color: #ffffff;
+}
+header .jumboTxt h1 {
+  font-size: 4rem;
+  line-height: 1;
+}
+header .jumboTxt p {
+  font-size: 1.4rem;
 }
 .home section {
   min-height: 450px;
