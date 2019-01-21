@@ -15,14 +15,14 @@ let slideLeft = {
   distance: "150%",
   origin: "left",
   opacity: 0,
-  delay: "500",
+  delay: "400",
   reset: true,
 };
 let slideRight = {
   distance: "150%",
   origin: "right",
   opacity: 0,
-  delay: "500",
+  delay: "400",
   reset: true,
 };
 

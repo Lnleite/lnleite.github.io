@@ -128,6 +128,7 @@ table {
 html {
   font-size: 100%;
   font-family: "Roboto", "Helvetica";
+  scroll-behavior: smooth;
 }
 body {
   background: #516481;
@@ -200,10 +201,14 @@ header .jumboTxt p {
 .home #about,
 .home #experience {
   background: #cfc7bb;
+  max-width: 100%;
+  overflow: hidden;
 }
 .home #projects,
 .home #tech {
   background: #467bbb;
+  max-width: 100%;
+  overflow: hidden;
 }
 .home #projects .projects {
   display: flex;
