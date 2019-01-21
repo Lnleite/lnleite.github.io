@@ -173,7 +173,7 @@ header .jumboImg {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  min-height: 830px;
+  min-height: 100vh;
   transition: background-image 1s ease, filter 1s ease;
 }
 header .loading {
@@ -210,55 +210,94 @@ header .jumboTxt p {
   max-width: 100%;
   overflow: hidden;
 }
-.home #projects .projects {
+.home #projects .wrapper {
+  margin: 0 auto 100px auto;
+  max-width: 960px;
+  cursor: pointer;
+}
+.home #projects .stage {
+  list-style: none;
+  padding: 0;
+}
+.home #projects .project {
+  width: 260px;
+  height: 400px;
+  margin: 30px;
+  float: left;
+  perspective: 1000px;
+}
+.home #projects .pro {
+  width: 260px;
+  height: 400px;
+  transform-style: preserve-3d;
+  transform: translateZ(-130px);
+  transition: transform 350ms 200ms;
+}
+.home #projects .pro:hover {
+  transform: rotateY(-78deg) translateZ(20px);
+}
+.home #projects .pro .poster,
+.home #projects .pro .info {
+  position: absolute;
+  width: 260px;
+  height: 400px;
+  background: #fff;
+  backface-visibility: hidden;
+}
+.home #projects .pro .poster {
+  transform: translateZ(130px);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../images/mappaImg.PNG);
+  box-shadow: inset 0px 0px 40px rgba(255, 255, 255, 0);
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-content: space-around;
+  font-size: 2rem;
+  color: #fff;
 }
-.home #projects .projects .project {
-  position: relative;
-  max-width: 150px;
-  margin-bottom: 40px;
-  background: #494747;
-  box-shadow: 1px 1px 7px black;
-  transition: background 0.5s ease;
+.home #projects .pro .poster h3 {
+  z-index: 10;
 }
-.home #projects .projects .project:hover {
-  background: #000000;
-}
-.home #projects .projects .project a {
-  text-decoration: none;
-  color: black;
-}
-.home #projects .projects .project img {
+.home #projects .pro .overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  opacity: 0.7;
   height: 100%;
 }
-.home #projects .projects .project .info {
+.home #projects .pro .info {
+  transform: rotateY(90deg) translateZ(130px);
+  border: 1px solid #b8b5b5;
+  font-size: 0.75rem;
+}
+.home #projects .pro::after {
+  content: "";
+  width: 260px;
+  height: 260px;
   position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  top: 40px;
-  color: white;
+  bottom: 0;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.3);
+  transform-origin: 100% 100%;
+  transform: rotateX(90deg) translateY(130px);
+  transition: box-shadow 350ms 200ms;
 }
-.home #projects .projects .project .skills {
-  opacity: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 5px;
-  transition: opacity 0.5s ease;
+.home #projects .pro:hover::after {
+  box-shadow: 20px -5px 50px rgba(0, 0, 0, 0.3);
 }
-.home #projects .projects .project .skills p {
-  background: #424242;
-  padding: 2px 2%;
-  margin: 5px 2%;
+.home #projects .pro .poster,
+.home #projects .pro .info {
+  transition: box-shadow 350ms 200ms;
 }
-.home #projects .projects .project:hover .skills {
-  opacity: 1;
+.home #projects .pro:hover .poster {
+  box-shadow: inset 300px 0px 40px rgba(255, 255, 255, 0.8);
+}
+.home #projects .pro .info {
+  box-shadow: inset -300px 0px 40px rgba(0, 0, 0, 0.5);
+}
+.home #projects .pro:hover .info {
+  box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0);
 }
 .home #tech .icons {
   display: flex;

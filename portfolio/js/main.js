@@ -16,14 +16,12 @@ let slideLeft = {
   origin: "left",
   opacity: 0,
   delay: "400",
-  reset: true,
 };
 let slideRight = {
   distance: "150%",
   origin: "right",
   opacity: 0,
   delay: "400",
-  reset: true,
 };
 
 ScrollReveal().reveal("#about .container", slideLeft);
