@@ -200,13 +200,13 @@ header .jumboTxt p {
 }
 .home #about,
 .home #experience {
-  background: #cfc7bb;
   max-width: 100%;
   overflow: hidden;
+  background: linear-gradient(110deg, #cfc7bb 60%, #516481 60%);
 }
 .home #projects,
 .home #tech {
-  background: #467bbb;
+  background: linear-gradient(240deg, #467bbb 60%, #516481 60%);
   max-width: 100%;
   overflow: hidden;
 }
