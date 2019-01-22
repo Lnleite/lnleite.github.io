@@ -165,7 +165,6 @@ html.sr .load-hidden {
 }
 header {
   position: relative;
-  min-height: 830px;
 }
 header .jumboImg {
   background-image: url(../images/jumboImg.jpg);
@@ -331,4 +330,9 @@ header .jumboTxt p {
 .home #tech .icons svg {
   width: 15%;
   margin: 0 1%;
+}
+@media (max-width: 481px) {
+  .home #tech .icons svg {
+    width: 40%;
+  }
 }
