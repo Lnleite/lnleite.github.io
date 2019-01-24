@@ -1,173 +1,188 @@
 .home {
-  section {
-    min-height: 450px;
-    padding: 60px 0;
-  }
-
-  #about,
-  #experience {
-    max-width: 100%;
-    overflow: hidden;
-    background: linear-gradient(110deg, #cfc7bb 60%, #516481 60%);
-  }
-
-  #projects,
-  #tech {
-    background: linear-gradient(240deg, #467bbb 60%, #516481 60%);
-    max-width: 100%;
-    overflow: hidden;
-  }
-
-  #projects {
-    a {
-      text-decoration: none;
-      color: black;
-    }
-
     h2 {
-      padding-bottom: 25px;
+        font-size: 1.8rem;
     }
 
-    .wrapper {
-      margin: 0 auto 100px auto;
-      max-width: 960px;
-      cursor: pointer;
+    section {
+        min-height: 450px;
+        padding: 60px 0;
     }
 
-    .stage {
-      list-style: none;
-      padding: 0;
+    #about,
+    #experience {
+        max-width: 100%;
+        overflow: hidden;
+        background: linear-gradient(110deg, #cfc7bb 60%, #516481 60%);
     }
 
-    .project {
-      width: 260px;
-      height: 400px;
-      margin: 30px;
-      float: left;
-      perspective: 1000px;
+    #projects,
+    #tech {
+        background: linear-gradient(240deg, #467bbb 60%, #516481 60%);
+        max-width: 100%;
+        overflow: hidden;
     }
 
-    .pro {
-      width: 260px;
-      height: 400px;
-      transform-style: preserve-3d;
-      transform: translateZ(-130px);
-      transition: transform 350ms 200ms;
-    }
-
-    .pro:hover {
-      transform: rotateY(-78deg) translateZ(20px);
-    }
-
-    .pro .poster,
-    .pro .info {
-      position: absolute;
-      width: 260px;
-      height: 400px;
-      background: #fff;
-      backface-visibility: hidden;
-    }
-
-    .pro {
-      .poster {
-        transform: translateZ(130px);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-image: url(../images/mappaImg.PNG);
-        box-shadow: inset 0px 0px 40px rgba(255, 255, 255, 0);
-        .center();
-        font-size: 2rem;
-        color: #fff;
-
-        h3 {
-          z-index: 10;
-        }
-      }
-
-      .overlay {
-        background-color: rgba(0, 0, 0, 0.5);
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
-
-      .info {
-        transform: rotateY(90deg) translateZ(130px);
-        border: 1px solid #b8b5b5;
-        font-size: 0.9rem;
-        padding: 4%;
-        background: @Silver;
-
-        p {
-          margin-top: 10px;
+    #projects {
+        a {
+            text-decoration: none;
+            color: black;
         }
 
         h2 {
-          text-align: center;
-          padding: 0;
+            padding-bottom: 25px;
         }
 
-        .skills {
-          font-size: 1rem;
-          text-align: center;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-around;
-          margin: 0 20%;
+        .wrapper {
+            margin: 0 auto 100px auto;
+            max-width: 960px;
+            cursor: pointer;
         }
-      }
 
-      &::after {
-        content: "";
-        width: 260px;
-        height: 260px;
-        position: absolute;
-        bottom: 0;
-        box-shadow: 0 30px 50px rgba(0, 0, 0, 0.3);
-        transform-origin: 100% 100%;
-        transform: rotateX(90deg) translateY(130px);
-        transition: box-shadow 350ms 200ms;
-      }
+        .stage {
+            list-style: none;
+            padding: 0;
+        }
 
-      &:hover::after {
-        box-shadow: 20px -5px 50px rgba(0, 0, 0, 0.3);
-      }
+        .project {
+            width: 260px;
+            height: 400px;
+            margin: 30px 6%;
+            float: left;
+            perspective: 1000px;
+        }
 
-      .poster,
-      .info {
-        transition: box-shadow 350ms 200ms;
-      }
+        .pro {
+            width: 260px;
+            height: 400px;
+            transform-style: preserve-3d;
+            transform: translateZ(-130px);
+            transition: transform 350ms 200ms;
+        }
 
-      &:hover .poster {
-        box-shadow: inset 300px 0px 40px rgba(255, 255, 255, 0.8);
-      }
+        .pro:hover {
+            transform: rotateY(-78deg) translateZ(20px);
+        }
 
-      .info {
-        box-shadow: inset -300px 0px 40px rgba(0, 0, 0, 0.5);
-      }
+        .pro .poster,
+        .pro .info {
+            position: absolute;
+            width: 260px;
+            height: 400px;
+            background: #fff;
+            backface-visibility: hidden;
+        }
 
-      &:hover .info {
-        box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0);
-      }
+        .pro {
+            .mappajob {
+                background-image: url(../images/mappaImg.PNG);
+            }
+
+            .lambdanotes {
+                background-image: url(../images/lambdaNotesImg.PNG);
+            }
+
+            .poster {
+                transform: translateZ(130px);
+                background-size: cover;
+                background-repeat: no-repeat;
+                box-shadow: inset 0px 0px 40px rgba(255, 255, 255, 0);
+                .center();
+                font-size: 2rem;
+                color: #fff;
+
+                h3 {
+                    z-index: 10;
+                }
+            }
+
+            .overlay {
+                background-color: rgba(0, 0, 0, 0.5);
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            .info {
+                transform: rotateY(90deg) translateZ(130px);
+                border: 1px solid #b8b5b5;
+                font-size: 0.9rem;
+                padding: 4%;
+                background: @Silver;
+
+                p {
+                    margin-top: 10px;
+                }
+
+                h2 {
+                    text-align: center;
+                    padding: 0;
+                }
+
+                .skills {
+                    font-size: 1rem;
+                    text-align: center;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                    margin: 0 13%;
+
+                    p {
+                        padding: 0 2%;
+                    }
+                }
+            }
+
+            &::after {
+                content: '';
+                width: 260px;
+                height: 260px;
+                position: absolute;
+                bottom: 0;
+                box-shadow: 0 30px 50px rgba(0, 0, 0, 0.3);
+                transform-origin: 100% 100%;
+                transform: rotateX(90deg) translateY(130px);
+                transition: box-shadow 350ms 200ms;
+            }
+
+            &:hover::after {
+                box-shadow: 20px -5px 50px rgba(0, 0, 0, 0.3);
+            }
+
+            .poster,
+            .info {
+                transition: box-shadow 350ms 200ms;
+            }
+
+            &:hover .poster {
+                box-shadow: inset 300px 0px 40px rgba(255, 255, 255, 0.8);
+            }
+
+            .info {
+                box-shadow: inset -300px 0px 40px rgba(0, 0, 0, 0.5);
+            }
+
+            &:hover .info {
+                box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0);
+            }
+        }
     }
-  }
 
-  #tech {
-    .icons {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
+    #tech {
+        .icons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
 
-      svg {
-        width: 15%;
-        margin: 0 1%;
+            svg {
+                width: 15%;
+                margin: 0 1%;
 
-        @media @phone {
-          width: 40%;
+                @media @phone {
+                    width: 40%;
+                }
+            }
         }
-      }
     }
-  }
 }

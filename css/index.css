@@ -114,7 +114,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
+  content: '';
   content: none;
 }
 table {
@@ -127,7 +127,7 @@ table {
 }
 html {
   font-size: 100%;
-  font-family: "Roboto", "Helvetica";
+  font-family: 'Roboto', 'Helvetica';
   scroll-behavior: smooth;
 }
 body {
@@ -154,14 +154,21 @@ html.sr .load-hidden {
   align-items: center;
   justify-content: space-around;
   min-height: 50px;
+  max-height: 50px;
 }
 .navigation nav a {
+  display: inline-block;
   color: #ffffff;
   text-decoration: none;
-  transition: border-bottom 1s ease;
+  padding: 14px 10%;
+  background: #a66429;
+  clip-path: polygon(112% -38%, 72% 101%, 4% 103%, 37% 0%);
+  transition: all 1s ease;
 }
 .navigation nav a:hover {
-  border-bottom: 1px dashed;
+  color: #a66429;
+  background: #fff;
+  clip-path: polygon(112% -38%, 72% 101%, 4% 103%, 37% 0%);
 }
 header {
   position: relative;
@@ -192,6 +199,9 @@ header .jumboTxt h1 {
 }
 header .jumboTxt p {
   font-size: 1.4rem;
+}
+.home h2 {
+  font-size: 1.8rem;
 }
 .home section {
   min-height: 450px;
@@ -228,7 +238,7 @@ header .jumboTxt p {
 .home #projects .project {
   width: 260px;
   height: 400px;
-  margin: 30px;
+  margin: 30px 6%;
   float: left;
   perspective: 1000px;
 }
@@ -250,11 +260,16 @@ header .jumboTxt p {
   background: #fff;
   backface-visibility: hidden;
 }
+.home #projects .pro .mappajob {
+  background-image: url(../images/mappaImg.PNG);
+}
+.home #projects .pro .lambdanotes {
+  background-image: url(../images/lambdaNotesImg.PNG);
+}
 .home #projects .pro .poster {
   transform: translateZ(130px);
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../images/mappaImg.PNG);
   box-shadow: inset 0px 0px 40px rgba(255, 255, 255, 0);
   display: flex;
   justify-content: center;
@@ -293,10 +308,13 @@ header .jumboTxt p {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 0 20%;
+  margin: 0 13%;
+}
+.home #projects .pro .info .skills p {
+  padding: 0 2%;
 }
 .home #projects .pro::after {
-  content: "";
+  content: '';
   width: 260px;
   height: 260px;
   position: absolute;
