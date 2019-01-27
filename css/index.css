@@ -219,6 +219,10 @@ header .jumboTxt p {
   max-width: 100%;
   overflow: hidden;
 }
+.home #about p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
 .home #projects a {
   text-decoration: none;
   color: black;
