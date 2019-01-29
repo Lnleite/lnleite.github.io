@@ -129,6 +129,7 @@ html {
   font-size: 100%;
   font-family: 'Roboto', 'Helvetica';
   scroll-behavior: smooth;
+  color: #242427;
 }
 body {
   background: #516481;
@@ -136,7 +137,7 @@ body {
 }
 .container {
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 1000px;
 }
 html.sr .load-hidden {
   visibility: hidden;
@@ -201,7 +202,7 @@ header .jumboTxt p {
   font-size: 1.4rem;
 }
 .home h2 {
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 .home section {
   min-height: 450px;
@@ -211,17 +212,32 @@ header .jumboTxt p {
 .home #experience {
   max-width: 100%;
   overflow: hidden;
-  background: linear-gradient(110deg, #cfc7bb 60%, #516481 60%);
+  background: linear-gradient(152deg, #cfc7bb 60%, #516481 60%);
 }
 .home #projects,
 .home #tech {
-  background: linear-gradient(240deg, #467bbb 60%, #516481 60%);
+  background: linear-gradient(216deg, #467bbb 60%, #516481 60%);
   max-width: 100%;
   overflow: hidden;
 }
-.home #about p {
+.home #about .main {
+  display: flex;
+  justify-content: space-between;
+}
+.home #about .main p {
   font-size: 1.5rem;
   line-height: 1.5;
+  padding-right: 10%;
+  padding-top: 20px;
+}
+.home #about .main .laurenPic {
+  background-image: url(../images/Lauren.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 350px;
+  min-height: 350px;
+  border-radius: 50%;
 }
 .home #projects a {
   text-decoration: none;
@@ -232,12 +248,13 @@ header .jumboTxt p {
 }
 .home #projects .wrapper {
   margin: 0 auto 100px auto;
-  max-width: 960px;
   cursor: pointer;
 }
 .home #projects .stage {
   list-style: none;
   padding: 0;
+  display: flex;
+  justify-content: space-around;
 }
 .home #projects .project {
   width: 260px;
