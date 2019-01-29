@@ -1,6 +1,6 @@
 .home {
     h2 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     section {
@@ -12,20 +12,37 @@
     #experience {
         max-width: 100%;
         overflow: hidden;
-        background: linear-gradient(110deg, #cfc7bb 60%, #516481 60%);
+        background: linear-gradient(152deg, #cfc7bb 60%, #516481 60%);
     }
 
     #projects,
     #tech {
-        background: linear-gradient(240deg, #467bbb 60%, #516481 60%);
+        background: linear-gradient(216deg, #467bbb 60%, #516481 60%);
         max-width: 100%;
         overflow: hidden;
     }
 
     #about {
-        p {
-            font-size: 1.5rem;
-            line-height: 1.5;
+        .main {
+            display: flex;
+            justify-content: space-between;
+
+            p {
+                font-size: 1.5rem;
+                line-height: 1.5;
+                padding-right: 10%;
+                padding-top: 20px;
+            }
+
+            .laurenPic {
+                background-image: url(../images/Lauren.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                min-width: 350px;
+                min-height: 350px;
+                border-radius: 50%;
+            }
         }
     }
 
@@ -41,13 +58,14 @@
 
         .wrapper {
             margin: 0 auto 100px auto;
-            max-width: 960px;
             cursor: pointer;
         }
 
         .stage {
             list-style: none;
             padding: 0;
+            display: flex;
+            justify-content: space-around;
         }
 
         .project {
