@@ -206,7 +206,7 @@ header .jumboTxt p {
 }
 .home section {
   min-height: 450px;
-  padding: 60px 0;
+  padding: 60px 2%;
 }
 .home #about,
 .home #experience {
@@ -229,6 +229,7 @@ header .jumboTxt p {
   line-height: 1.5;
   padding-right: 10%;
   padding-top: 20px;
+  font-weight: bold;
 }
 .home #about .main .laurenPic {
   background-image: url(../images/Lauren.jpg);
