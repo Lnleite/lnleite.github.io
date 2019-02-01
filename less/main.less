@@ -1,6 +1,6 @@
 .home {
     h2 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 
     section {
@@ -191,6 +191,41 @@
 
             &:hover .info {
                 box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0);
+            }
+        }
+    }
+
+    #experience {
+        .exp {
+            display: flex;
+            justify-content: space-between;
+
+            .block {
+                background: @DarkSlateGray;
+                color: #fff;
+                padding: 15px 2% 10px 2%;
+                max-width: 500px;
+                min-height: 250px;
+                margin-top: 10px;
+
+                h3 {
+                    font-size: 1.5rem;
+                    padding: 2px 0;
+                }
+
+                .date {
+                    font-style: italic;
+                    font-size: 0.9rem;
+                }
+
+                .description {
+                    font-size: 1.1rem;
+                    line-height: 1.5;
+                }
+            }
+
+            .job {
+                margin-right: 2%;
             }
         }
     }

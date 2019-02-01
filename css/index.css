@@ -202,7 +202,7 @@ header .jumboTxt p {
   font-size: 1.4rem;
 }
 .home h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 .home section {
   min-height: 450px;
@@ -361,6 +361,33 @@ header .jumboTxt p {
 }
 .home #projects .pro:hover .info {
   box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0);
+}
+.home #experience .exp {
+  display: flex;
+  justify-content: space-between;
+}
+.home #experience .exp .block {
+  background: #242427;
+  color: #fff;
+  padding: 15px 2% 10px 2%;
+  max-width: 500px;
+  min-height: 250px;
+  margin-top: 10px;
+}
+.home #experience .exp .block h3 {
+  font-size: 1.5rem;
+  padding: 2px 0;
+}
+.home #experience .exp .block .date {
+  font-style: italic;
+  font-size: 0.9rem;
+}
+.home #experience .exp .block .description {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+.home #experience .exp .job {
+  margin-right: 2%;
 }
 .home #tech .icons {
   display: flex;
