@@ -114,7 +114,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 table {
@@ -127,12 +127,11 @@ table {
 }
 html {
   font-size: 100%;
-  font-family: 'Roboto', 'Helvetica';
+  font-family: "Roboto", "Helvetica";
   scroll-behavior: smooth;
   color: #242427;
 }
 body {
-  background: #516481;
   line-height: 1.4;
 }
 .container {
@@ -154,8 +153,6 @@ html.sr .load-hidden {
   justify-content: center;
   align-items: center;
   justify-content: space-around;
-  min-height: 50px;
-  max-height: 50px;
 }
 .navigation nav a {
   display: inline-block;
@@ -201,24 +198,21 @@ header .jumboTxt h1 {
 header .jumboTxt p {
   font-size: 1.4rem;
 }
+.home {
+  background: linear-gradient(#4181af, #0a0e35);
+  padding: 1px;
+}
 .home h2 {
   font-size: 2.2rem;
 }
-.home section {
-  min-height: 450px;
-  padding: 60px 2%;
-}
 .home #about,
-.home #experience {
-  max-width: 100%;
-  overflow: hidden;
-  background: linear-gradient(152deg, #cfc7bb 60%, #516481 60%);
-}
+.home #experience,
 .home #projects,
 .home #tech {
-  background: linear-gradient(216deg, #467bbb 60%, #516481 60%);
-  max-width: 100%;
-  overflow: hidden;
+  background: #cfc7bb;
+  margin: 20% 0;
+  padding: 10px 2%;
+  border-radius: 20px;
 }
 .home #about .main {
   display: flex;
@@ -256,6 +250,7 @@ header .jumboTxt p {
   padding: 0;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 .home #projects .project {
   width: 260px;
@@ -336,7 +331,7 @@ header .jumboTxt p {
   padding: 0 2%;
 }
 .home #projects .pro::after {
-  content: '';
+  content: "";
   width: 260px;
   height: 260px;
   position: absolute;
@@ -402,4 +397,40 @@ header .jumboTxt p {
   .home #tech .icons svg {
     width: 40%;
   }
+}
+.home #contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding-bottom: 30px;
+}
+.home #contact .angler {
+  background: url(../images/fish.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right center;
+  height: 600px;
+  width: 60%;
+}
+.home #contact p {
+  font-size: 1.5rem;
+}
+.home #contact i {
+  font-size: 60px;
+  background: #fff;
+  border-radius: 50%;
+}
+.home #contact .fa-linkedin {
+  color: #0077b5;
+  clip-path: inset(4px 0px);
+}
+.home #contact .fa-twitter-square {
+  color: #1da1f2;
+  clip-path: inset(4px 0px);
+}
+.home #contact .fa-github {
+  color: #fff;
+  background: #000;
 }
