@@ -210,33 +210,44 @@ header .jumboTxt p {
 .home #projects,
 .home #tech {
   background: #cfc7bb;
-  margin: 20% 0;
+  margin: 20% 2%;
   padding: 10px 2%;
   border-radius: 20px;
 }
 .home #about .main {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+}
+@media (max-width: 751px) {
+  .home #about .main {
+    flex-direction: column;
+  }
 }
 .home #about .main p {
   font-size: 1.5rem;
   line-height: 1.5;
-  padding-right: 10%;
   padding-top: 20px;
   font-weight: bold;
 }
 .home #about .main .laurenPic {
-  background-image: url(../images/Lauren.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  min-width: 350px;
-  min-height: 350px;
+  max-height: 350px;
   border-radius: 50%;
+}
+@media (max-width: 751px) {
+  .home #about .main .laurenPic {
+    width: 60%;
+  }
+}
+@media (max-width: 501px) {
+  .home #about .main .laurenPic {
+    width: 80%;
+  }
 }
 .home #projects a {
   text-decoration: none;
   color: black;
+  margin: 0px 5%;
 }
 .home #projects h2 {
   padding-bottom: 25px;
@@ -307,10 +318,11 @@ header .jumboTxt p {
 }
 .home #projects .pro .info {
   transform: rotateY(90deg) translateZ(130px);
-  border: 1px solid #b8b5b5;
+  border: 1px solid #cfc7bb;
   font-size: 0.9rem;
   padding: 4%;
-  background: #cfc7bb;
+  background: #242427;
+  color: #fff;
 }
 .home #projects .pro .info p {
   margin-top: 10px;
@@ -352,7 +364,7 @@ header .jumboTxt p {
   box-shadow: inset 300px 0px 40px rgba(255, 255, 255, 0.8);
 }
 .home #projects .pro .info {
-  box-shadow: inset -300px 0px 40px rgba(0, 0, 0, 0.5);
+  box-shadow: inset -300px 0px 40px rgba(255, 255, 255, 0.5);
 }
 .home #projects .pro:hover .info {
   box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0);
@@ -391,46 +403,93 @@ header .jumboTxt p {
 }
 .home #tech .icons svg {
   width: 15%;
-  margin: 0 1%;
+  margin: 3px 1%;
 }
-@media (max-width: 481px) {
+@media (max-width: 751px) {
+  .home #tech .icons svg {
+    width: 24%;
+  }
+}
+@media (max-width: 501px) {
   .home #tech .icons svg {
     width: 40%;
   }
 }
 .home #contact {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   text-align: center;
   color: #fff;
-  padding-bottom: 30px;
+  padding: 30px 0;
+  overflow-x: hidden;
+  position: relative;
 }
-.home #contact .angler {
-  background: url(../images/fish.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: right center;
-  height: 600px;
-  width: 60%;
+.home #contact .fish {
+  position: relative;
+  margin-left: -14px;
+  z-index: 10;
 }
-.home #contact p {
-  font-size: 1.5rem;
+.home #contact .fish .angler {
+  height: 560px;
 }
-.home #contact i {
+.home #contact .fish .eye {
+  background: white;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 170px;
+  right: 35%;
+  clip-path: inset(30px 0px);
+  transition: clip-path 1s ease;
+}
+.home #contact .fish .openeye {
+  clip-path: inset(0px 0px);
+}
+.home #contact .swim {
+  animation: MoveUpDown 1s linear 3;
+}
+@keyframes MoveUpDown {
+  0%,
+  100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 25px;
+  }
+}
+.home #contact .main {
+  position: absolute;
+  top: 22%;
+  width: 330px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+.home #contact .main p {
+  font-size: 1.7rem;
+}
+.home #contact .main .email {
+  font-weight: bold;
+  color: #ff5757;
+}
+.home #contact .main i {
   font-size: 60px;
   background: #fff;
   border-radius: 50%;
 }
-.home #contact .fa-linkedin {
+.home #contact .main .links {
+  display: flex;
+  justify-content: space-around;
+}
+.home #contact .main .links .fa-linkedin {
   color: #0077b5;
   clip-path: inset(4px 0px);
 }
-.home #contact .fa-twitter-square {
+.home #contact .main .links .fa-twitter-square {
   color: #1da1f2;
   clip-path: inset(4px 0px);
 }
-.home #contact .fa-github {
+.home #contact .main .links .fa-github {
   color: #fff;
   background: #000;
 }
