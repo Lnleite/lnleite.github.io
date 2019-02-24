@@ -204,9 +204,11 @@
       display: flex;
       justify-content: space-between;
 
+      @media @phone {
+        flex-direction: column;
+      }
+
       .block {
-        background: @DarkSlateGray;
-        color: #fff;
         padding: 15px 2% 10px 2%;
         max-width: 500px;
         min-height: 250px;

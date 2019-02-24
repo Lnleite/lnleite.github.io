@@ -373,9 +373,12 @@ header .jumboTxt p {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 501px) {
+  .home #experience .exp {
+    flex-direction: column;
+  }
+}
 .home #experience .exp .block {
-  background: #242427;
-  color: #fff;
   padding: 15px 2% 10px 2%;
   max-width: 500px;
   min-height: 250px;
