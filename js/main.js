@@ -21,10 +21,17 @@ let slideRight = {
   delay: "400",
 };
 
-ScrollReveal().reveal("#about .container", slideLeft);
-ScrollReveal().reveal("#projects .container", slideRight);
-ScrollReveal().reveal("#experience .container", slideLeft);
-ScrollReveal().reveal("#tech .container", slideRight);
+let zoomIn = {
+  scale: 0,
+  opacity: 0,
+  duration: "800",
+  delay: "400",
+};
+
+ScrollReveal().reveal("#about", zoomIn);
+ScrollReveal().reveal("#projects", zoomIn);
+ScrollReveal().reveal("#experience", zoomIn);
+ScrollReveal().reveal("#tech", zoomIn);
 
 // Fish
 let fish = document.querySelector(".singleFish");
