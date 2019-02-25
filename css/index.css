@@ -214,12 +214,32 @@ header .jumboTxt {
   left: 15%;
   color: #ffffff;
 }
+@media (max-width: 501px) {
+  header .jumboTxt {
+    text-align: center;
+    margin: 0 auto;
+    left: 10%;
+    padding: 0 2%;
+    transform: translate(-5%, 0);
+  }
+}
 header .jumboTxt h1 {
-  font-size: 4rem;
+  font-size: 7rem;
   line-height: 1;
+  font-family: "YellowTail", cursive;
+}
+@media (max-width: 751px) {
+  header .jumboTxt h1 {
+    font-size: 5rem;
+  }
+}
+@media (max-width: 501px) {
+  header .jumboTxt h1 {
+    font-size: 4rem;
+  }
 }
 header .jumboTxt p {
-  font-size: 1.4rem;
+  font-size: 2rem;
 }
 .fishAnimation {
   position: relative;

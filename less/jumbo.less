@@ -24,13 +24,30 @@ header {
     left: 15%;
     color: #ffffff;
 
+    @media @phone {
+      text-align: center;
+      margin: 0 auto;
+      left: 10%;
+      padding: 0 2%;
+      transform: translate(-5%, 0);
+    }
+
     h1 {
-      font-size: 4rem;
+      font-size: 7rem;
       line-height: 1;
+      font-family: "YellowTail", cursive;
+
+      @media @tablet {
+        font-size: 5rem;
+      }
+
+      @media @phone {
+        font-size: 4rem;
+      }
     }
 
     p {
-      font-size: 1.4rem;
+      font-size: 2rem;
     }
   }
 }
