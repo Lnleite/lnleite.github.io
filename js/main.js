@@ -27,19 +27,27 @@ ScrollReveal().reveal("#experience .container", slideLeft);
 ScrollReveal().reveal("#tech .container", slideRight);
 
 // Fish
-let fish = document.querySelector(".fish");
+let fish = document.querySelector(".singleFish");
 let eye = document.querySelector(".eye");
 
 function swim() {
-  fish.classList.add("swim");
+  let main = document.querySelector("#contact .main");
+  fish.classList.add("swimAngler");
+  if (!main.style.opacity) {
+    main.style.opacity = 1;
+  }
 }
 
 fish.addEventListener("mouseover", function(event) {
   eye.classList.add("openeye");
-  TweenLite.to(fish, 20, {
+  TweenLite.to(fish, 8, {
     onStart: swim,
     ease: Circ.ease,
-    x: 5000,
+    x: "100%",
     delay: 1,
+    onComplete: function() {
+      fish.classList.remove("swimAngler");
+      fish.style.opacity = 0;
+    },
   });
 });
