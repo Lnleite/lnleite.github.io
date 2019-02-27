@@ -147,18 +147,28 @@ html.sr .load-hidden {
   background: #a66429;
   z-index: 100;
 }
-.navigation nav {
-  max-width: 800px;
+.navigation .nav {
   display: flex;
-  justify-content: center;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 5px 5%;
 }
-@media (max-width: 751px) {
-  .navigation nav {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+.navigation .nav .hamburger {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.navigation .nav .hamburger p {
+  width: 35px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+}
+.navigation nav {
+  display: none;
+  max-width: 800px;
+  justify-content: space-between;
 }
 .navigation nav a {
   display: inline-block;
@@ -200,6 +210,7 @@ header .jumboImg {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-attachment: fixed;
   min-height: 100vh;
   transition: background-image 1s ease, filter 1s ease;
 }
@@ -395,19 +406,12 @@ header .jumboTxt p {
 .home h2 {
   font-size: 2.2rem;
 }
-.home #about,
-.home #experience,
-.home #projects,
-.home #tech {
+.home .area {
   background: #cfc7bb;
-  margin: 0 2%;
   padding: 10px 2%;
   border-radius: 20px;
   position: relative;
   z-index: 5;
-}
-.home #about {
-  margin-top: 0;
 }
 .home #about .main {
   display: flex;
@@ -613,26 +617,26 @@ header .jumboTxt p {
     width: 40%;
   }
 }
-.home #contact {
+.home #contactMe {
   text-align: center;
   color: #fff;
   padding: 15px 0 70px 0;
 }
-.home #contact .singleFish {
+.home #contactMe .singleFish {
   position: absolute;
   z-index: 10;
   top: 0;
   height: 500px;
   width: 100%;
 }
-.home #contact .singleFish .angler {
+.home #contactMe .singleFish .angler {
   background: url(../images/fish.svg);
   background-repeat: no-repeat;
   height: 560px;
   background-size: contain;
   background-position: center;
 }
-.home #contact .singleFish .eye {
+.home #contactMe .singleFish .eye {
   background: white;
   height: 50px;
   width: 50px;
@@ -645,16 +649,16 @@ header .jumboTxt p {
   transition: clip-path 1s ease;
 }
 @media (max-width: 751px) {
-  .home #contact .singleFish .eye {
+  .home #contactMe .singleFish .eye {
     left: 68%;
     top: 40%;
     transform: translate(-68%, 0%);
   }
 }
-.home #contact .singleFish .openeye {
+.home #contactMe .singleFish .openeye {
   clip-path: inset(0px 0px);
 }
-.home #contact .swimAngler {
+.home #contactMe .swimAngler {
   animation: MoveUpDown 1s linear infinite alternate;
 }
 @keyframes MoveUpDown {
@@ -665,41 +669,41 @@ header .jumboTxt p {
     margin-top: 25px;
   }
 }
-.home #contact .main {
+.home #contactMe .main {
   width: 330px;
   margin: 0 auto;
 }
 @media (max-width: 501px) {
-  .home #contact .main {
+  .home #contactMe .main {
     opacity: 0;
     transition: opacity 0.2s;
   }
 }
-.home #contact .main p {
+.home #contactMe .main p {
   font-size: 1.7rem;
 }
-.home #contact .main .email {
+.home #contactMe .main .email {
   font-weight: bold;
   color: #ff5757;
 }
-.home #contact .main i {
+.home #contactMe .main i {
   font-size: 60px;
   background: #fff;
   border-radius: 50%;
 }
-.home #contact .main .links {
+.home #contactMe .main .links {
   display: flex;
   justify-content: space-around;
 }
-.home #contact .main .links .fa-linkedin {
+.home #contactMe .main .links .fa-linkedin {
   color: #0077b5;
   clip-path: inset(4px 0px);
 }
-.home #contact .main .links .fa-twitter-square {
+.home #contactMe .main .links .fa-twitter-square {
   color: #1da1f2;
   clip-path: inset(4px 0px);
 }
-.home #contact .main .links .fa-github {
+.home #contactMe .main .links .fa-github {
   color: #fff;
   background: #000;
 }

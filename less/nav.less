@@ -4,15 +4,31 @@
   background: @Sienna;
   z-index: 100;
 
-  nav {
-    max-width: 800px;
-    .center();
+  .nav {
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 5px 5%;
 
-    @media @tablet {
-      flex-wrap: wrap;
-      justify-content: center;
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      p {
+        width: 35px;
+        height: 3px;
+        background-color: #fff;
+        margin: 4px 0;
+      }
     }
+  }
+
+  nav {
+    display: none;
+    max-width: 800px;
+    justify-content: space-between;
 
     a {
       display: inline-block;

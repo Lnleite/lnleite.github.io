@@ -20,13 +20,21 @@
 
 <body>
   <section class="navigation">
-    <nav class="container">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#tech">Tech</a>
-      <a href="#contactMe">Contact</a>
-    </nav>
+    <div class="nav container">
+      <div>LND</div>
+      <div class="hamburger">
+        <p></p>
+        <p></p>
+        <p></p>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#tech">Tech</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </section>
   <header>
     <div class="jumboImg loading"></div>
@@ -36,13 +44,13 @@
     </div>
   </header>
   <div class="home">
-    <div class="fishAnimation">
-      <img class="jellyfish fish" src="./images/fish/jellyfish.svg" alt="jellyfish">
-      <img class="normFish2 fish" src="./images/fish/normFish2.svg" alt="">
-      <img class="dolphin fish" src="./images/fish/dolphin.svg" alt="">
+    <section id="about">
+      <div class="fishAnimation">
+        <img class="jellyfish fish" src="./images/fish/jellyfish.svg" alt="jellyfish">
+        <img class="normFish2 fish" src="./images/fish/normFish2.svg" alt="">
+        <img class="dolphin fish" src="./images/fish/dolphin.svg" alt="">
 
-      <div class="container">
-        <section id="about">
+        <div class="container area left">
           <h2>About</h2>
           <div class="main">
             <p>I am a full stack web developer with practical experience in building web apps with React, Node, and
@@ -53,16 +61,17 @@
               developer. </p>
             <img class="laurenPic" src="./images/Lauren.jpg" alt="Lauren Dubose">
           </div>
-        </section>
+        </div>
       </div>
-    </div>
-    <div class="fishAnimation">
-      <img class="puffer fish" src="./images/fish/puffer.svg" alt="puffer fish">
-      <img class="school fish" src="./images/fish/school.svg" alt="School of fish">
-      <img class="spiny fish" src="./images/fish/spinyFish.svg" alt="A Spiny Fish">
-      <img class="sword fish" src="./images/fish/swordfish.svg" alt="swordfish">
-      <div class="container">
-        <section id="projects">
+    </section>
+
+    <section id="projects">
+      <div class="fishAnimation">
+        <img class="puffer fish" src="./images/fish/puffer.svg" alt="puffer fish">
+        <img class="school fish" src="./images/fish/school.svg" alt="School of fish">
+        <img class="spiny fish" src="./images/fish/spinyFish.svg" alt="A Spiny Fish">
+        <img class="sword fish" src="./images/fish/swordfish.svg" alt="swordfish">
+        <div class="container area right">
           <h2>Projects</h2>
           <div class="wrapper">
             <ul class="stage">
@@ -125,16 +134,16 @@
               </a>
             </ul>
           </div>
-        </section>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="fishAnimation">
-      <img class="normFish3 fish" src="./images/fish/normFish3.svg" alt="Normal fish">
-      <img class="seahorse fish" src="./images/fish/seahorse.svg" alt="shark">
-      <img src="" alt="">
-      <div class="container">
-        <section id="experience">
+    <section id="experience">
+      <div class="fishAnimation">
+        <img class="normFish3 fish" src="./images/fish/normFish3.svg" alt="Normal fish">
+        <img class="seahorse fish" src="./images/fish/seahorse.svg" alt="shark">
+        <img src="" alt="">
+        <div class="container area left">
           <h2>Professional Experience</h2>
           <div class="exp">
             <div class="job block">
@@ -158,15 +167,15 @@
                 Development program that is 40+ hours a week of intensive studying.</p>
             </div>
           </div>
-        </section>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="fishAnimation">
-      <img class="shark fish" src="./images/fish/shark.svg" alt="">
-      <img class="normFish fish" src="./images/fish/normalFish.svg" alt="">
-      <div class="container">
-        <section id="tech">
+    <section id="tech">
+      <div class="fishAnimation">
+        <img class="shark fish" src="./images/fish/shark.svg" alt="">
+        <img class="normFish fish" src="./images/fish/normalFish.svg" alt="">
+        <div class="container area right">
           <h2>Tech</h2>
           <div class="icons">
             <svg viewBox="0 0 128 128">
@@ -361,17 +370,17 @@
               </path>
             </svg>
           </div>
-        </section>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div id="contactMe" class="fishAnimation">
+    <div id="contact" class="fishAnimation">
       <img class="bass fish" src="./images/fish/bass.svg" alt="">
       <img class="norm fish" src="./images/fish/normalFish.svg" alt="">
 
       <img class="whale fish" src="./images/fish/whale.svg" alt="">
 
-      <section id="contact">
+      <section id="contactMe">
 
         <div class="singleFish">
           <div class="angler"></div>

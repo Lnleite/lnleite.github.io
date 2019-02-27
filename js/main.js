@@ -13,25 +13,18 @@ let slideLeft = {
   origin: "left",
   opacity: 0,
   delay: "400",
+  duration: "1500",
 };
 let slideRight = {
   distance: "150%",
   origin: "right",
   opacity: 0,
   delay: "400",
+  duration: "1500",
 };
 
-let zoomIn = {
-  scale: 0,
-  opacity: 0,
-  duration: "800",
-  delay: "400",
-};
-
-ScrollReveal().reveal("#about", zoomIn);
-ScrollReveal().reveal("#projects", zoomIn);
-ScrollReveal().reveal("#experience", zoomIn);
-ScrollReveal().reveal("#tech", zoomIn);
+ScrollReveal().reveal(".left", slideLeft);
+ScrollReveal().reveal(".right", slideRight);
 
 // Fish
 let fish = document.querySelector(".singleFish");
@@ -58,3 +51,14 @@ fish.addEventListener("mouseover", function(event) {
     },
   });
 });
+
+//  Thinking about active nav areas
+// let url = window.location.href;
+// console.log(url);
+// let aTags = document.querySelectorAll("nav a");
+// aTags.forEach(function() {
+//   console.log(href);
+//   if (url == this.href) {
+//     console.log(this.href);
+//   }
+// });
