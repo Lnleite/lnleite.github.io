@@ -132,7 +132,7 @@ html {
   color: #242427;
 }
 body {
-  background: #516481;
+  background: #3b6598;
   line-height: 1.4;
 }
 .container {
@@ -227,16 +227,13 @@ header .jumboTxt p {
   padding: 60px 2%;
 }
 .home #about,
-.home #experience {
-  max-width: 100%;
-  overflow: hidden;
-  background: linear-gradient(152deg, #cfc7bb 60%, #516481 60%);
-}
+.home #experience,
 .home #projects,
 .home #tech {
-  background: linear-gradient(216deg, #467bbb 60%, #516481 60%);
-  max-width: 100%;
-  overflow: hidden;
+  background: #cfc7bb;
+  margin: 50px 0;
+  border-radius: 20px;
+  box-shadow: 1px 3px 13px #242427;
 }
 .home #about .main {
   display: flex;
