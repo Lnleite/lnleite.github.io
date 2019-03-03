@@ -640,7 +640,7 @@ header .jumboTxt p {
   justify-content: space-around;
 }
 .home #tech .icons svg {
-  width: 15%;
+  width: 20%;
   margin: 3px 1%;
 }
 @media (max-width: 751px) {
