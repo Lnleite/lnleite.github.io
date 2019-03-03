@@ -184,6 +184,11 @@ html.sr .load-hidden {
   width: 150px;
   height: 100vh;
 }
+@media (max-width: 501px) {
+  .navigation .sideNav {
+    width: 100vw;
+  }
+}
 .navigation .sideNav .navFish {
   cursor: pointer;
   padding-top: 2px;

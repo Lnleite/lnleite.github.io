@@ -77,10 +77,10 @@ hamburger.addEventListener("click", function() {
     sideNav,
     1.5,
     {
-      x: 200,
+      x: "100%",
     },
     {
-      x: 0,
+      x: "0%",
       onStart: function() {
         fishNav.style.animation = "eat 2s";
       },
@@ -102,6 +102,6 @@ function closeNav() {
   let tl = new TimelineLite();
   tl.to(hamburger, 0.01, { scale: 1 })
     .to(fishNav, 1, { x: -30, rotationY: 180 })
-    .to(sideNav, 1.5, { x: 200 })
+    .to(sideNav, 1.5, { x: "120%" })
     .to(fishNav, 0.01, { rotationY: 0, x: 0 });
 }
