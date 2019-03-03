@@ -6,21 +6,15 @@
     font-size: 2.2rem;
   }
 
-  #about,
-  #experience,
-  #projects,
-  #tech {
+  .area {
     background: @Silver;
-    margin: 0 2%;
-    padding: 10px 2%;
+    padding: 15px 2%;
     border-radius: 20px;
     position: relative;
     z-index: 5;
   }
 
   #about {
-    margin-top: 0;
-
     .main {
       display: flex;
       justify-content: space-around;
@@ -247,7 +241,7 @@
       justify-content: space-around;
 
       svg {
-        width: 15%;
+        width: 20%;
         margin: 3px 1%;
 
         @media @tablet {
@@ -261,7 +255,7 @@
     }
   }
 
-  #contact {
+  #contactMe {
     text-align: center;
     color: #fff;
     padding: 15px 0 70px 0;
@@ -298,6 +292,14 @@
           left: 68%;
           top: 40%;
           transform: translate(-68%, 0%);
+        }
+
+        @media @phone {
+          left: 63%;
+          top: 41%;
+          transform: translate(-63%, 41%);
+          width: 30px;
+          height: 30px;
         }
       }
 

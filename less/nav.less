@@ -1,0 +1,96 @@
+.navigation {
+  position: fixed;
+  width: 100%;
+  background: @Sienna;
+  z-index: 100;
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 5%;
+
+    .logo {
+      font-family: "YellowTail", cursive;
+      font-size: 1.5rem;
+      font-weight: bold;
+
+      a {
+        text-decoration: none;
+        color: @navColor;
+      }
+    }
+
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      cursor: pointer;
+
+      p {
+        width: 35px;
+        height: 3px;
+        background-color: @navColor;
+        margin: 4px 0;
+      }
+    }
+  }
+
+  .sideNav {
+    display: none;
+    position: absolute;
+    background: @Sienna;
+    top: 0;
+    right: 0;
+    width: 25vw;
+    height: 100vh;
+
+    @media @phone {
+      width: 100vw;
+    }
+
+    .navFish {
+      cursor: pointer;
+      padding-top: 2px;
+      width: 40px;
+    }
+
+    nav {
+      .center();
+      height: 80%;
+      flex-direction: column;
+      justify-content: space-between;
+
+      a {
+        display: inline-block;
+        color: @navColor;
+        text-decoration: none;
+        text-align: center;
+        width: 100%;
+        padding: 8px 0;
+        clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%);
+        transition: all 1s ease;
+
+        &:hover {
+          color: @Sienna;
+          background: @navColor;
+          clip-path: polygon(100% 0%, 87% 100%, 0% 100%, 15% 0%);
+
+          @media @phone {
+            clip-path: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes eat {
+  0% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 110%, 0 120%, 40% 64%, 0 20%);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 110%, 0 60%, 40% 64%, 0 65%);
+  }
+}
