@@ -114,7 +114,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
+  content: '';
   content: none;
 }
 table {
@@ -127,9 +127,29 @@ table {
 }
 html {
   font-size: 100%;
-  font-family: "Roboto", "Helvetica";
+  font-family: 'Roboto', 'Helvetica';
   scroll-behavior: smooth;
   color: #242427;
+}
+h1 {
+  font-size: 7.594rem;
+}
+h2 {
+  font-size: 5.063rem;
+}
+h3 {
+  font-size: 3.375rem;
+}
+h4 {
+  font-size: 2.25rem;
+}
+h5 {
+  font-size: 1.5rem;
+}
+h6,
+p,
+a {
+  font-size: 1rem;
 }
 body {
   line-height: 1.4;
@@ -144,44 +164,35 @@ html.sr .load-hidden {
 .navigation {
   position: fixed;
   width: 100%;
-  background: #a66429;
   z-index: 100;
 }
 .navigation .nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   width: 100%;
-  padding: 10px 5%;
-}
-.navigation .nav .logo {
-  font-family: "YellowTail", cursive;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-.navigation .nav .logo a {
-  text-decoration: none;
-  color: #ffffff;
+  padding: 0px 5%;
 }
 .navigation .nav .hamburger {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   cursor: pointer;
+  padding-top: 40px;
 }
 .navigation .nav .hamburger p {
   width: 35px;
   height: 3px;
-  background-color: #ffffff;
+  background-color: rgba(255, 251, 245, 0.9);
   margin: 4px 0;
 }
 .navigation .sideNav {
   display: none;
   position: absolute;
-  background: #a66429;
+  background: rgba(18, 44, 95, 0.9);
   top: 0;
   right: 0;
-  width: 25vw;
+  width: 360px;
   height: 100vh;
 }
 @media (max-width: 501px) {
@@ -191,7 +202,7 @@ html.sr .load-hidden {
 }
 .navigation .sideNav .navFish {
   cursor: pointer;
-  padding-top: 2px;
+  margin-top: 39px;
   width: 40px;
 }
 .navigation .sideNav nav {
@@ -200,22 +211,20 @@ html.sr .load-hidden {
   align-items: center;
   height: 80%;
   flex-direction: column;
-  justify-content: space-between;
 }
 .navigation .sideNav nav a {
   display: inline-block;
-  color: #ffffff;
+  color: rgba(255, 251, 245, 0.9);
   text-decoration: none;
   text-align: center;
+  font-size: 1.5rem;
   width: 100%;
-  padding: 8px 0;
-  clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%);
+  padding: 20px 0;
   transition: all 1s ease;
 }
 .navigation .sideNav nav a:hover {
-  color: #a66429;
-  background: #ffffff;
-  clip-path: polygon(100% 0%, 87% 100%, 0% 100%, 15% 0%);
+  color: rgba(18, 44, 95, 0.9);
+  background: rgba(255, 251, 245, 0.9);
 }
 @media (max-width: 501px) {
   .navigation .sideNav nav a:hover {
@@ -440,14 +449,16 @@ header .jumboTxt p {
   padding: 1px;
 }
 .home h2 {
-  font-size: 2.2rem;
+  font-family: 'Yellowtail';
 }
 .home .area {
   background: #cfc7bb;
   padding: 15px 2%;
-  border-radius: 20px;
+  border-radius: 3px;
   position: relative;
   z-index: 5;
+  background: rgba(255, 251, 245, 0.9);
+  padding: 40px;
 }
 .home #about .main {
   display: flex;
@@ -464,20 +475,6 @@ header .jumboTxt p {
   line-height: 1.5;
   padding-top: 20px;
   font-weight: bold;
-}
-.home #about .main .laurenPic {
-  max-height: 350px;
-  border-radius: 50%;
-}
-@media (max-width: 751px) {
-  .home #about .main .laurenPic {
-    width: 60%;
-  }
-}
-@media (max-width: 501px) {
-  .home #about .main .laurenPic {
-    width: 80%;
-  }
 }
 .home #projects a {
   text-decoration: none;
@@ -537,10 +534,9 @@ header .jumboTxt p {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
   color: #fff;
 }
-.home #projects .pro .poster h3 {
+.home #projects .pro .poster h4 {
   z-index: 10;
 }
 .home #projects .pro .overlay {
@@ -554,7 +550,6 @@ header .jumboTxt p {
 .home #projects .pro .info {
   transform: rotateY(90deg) translateZ(130px);
   border: 1px solid #cfc7bb;
-  font-size: 0.9rem;
   padding: 4%;
   background: #242427;
   color: #fff;
@@ -562,12 +557,11 @@ header .jumboTxt p {
 .home #projects .pro .info p {
   margin-top: 10px;
 }
-.home #projects .pro .info h2 {
+.home #projects .pro .info h5 {
   text-align: center;
   padding: 0;
 }
 .home #projects .pro .info .skills {
-  font-size: 1rem;
   text-align: center;
   display: flex;
   flex-wrap: wrap;
@@ -578,7 +572,7 @@ header .jumboTxt p {
   padding: 0 2%;
 }
 .home #projects .pro::after {
-  content: "";
+  content: '';
   width: 260px;
   height: 260px;
   position: absolute;
