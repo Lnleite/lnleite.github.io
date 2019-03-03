@@ -250,8 +250,8 @@ header .loading {
 }
 header .jumboTxt {
   position: absolute;
-  top: 40%;
-  left: 15%;
+  top: 35%;
+  left: 10%;
   color: #ffffff;
 }
 @media (max-width: 501px) {
@@ -275,7 +275,8 @@ header .jumboTxt h1 {
 }
 @media (max-width: 501px) {
   header .jumboTxt h1 {
-    font-size: 4rem;
+    font-size: 5rem;
+    padding-bottom: 5px;
   }
 }
 header .jumboTxt h1::after {
@@ -443,7 +444,7 @@ header .jumboTxt p {
 }
 .home .area {
   background: #cfc7bb;
-  padding: 10px 2%;
+  padding: 15px 2%;
   border-radius: 20px;
   position: relative;
   z-index: 5;
@@ -688,6 +689,15 @@ header .jumboTxt p {
     left: 68%;
     top: 40%;
     transform: translate(-68%, 0%);
+  }
+}
+@media (max-width: 501px) {
+  .home #contactMe .singleFish .eye {
+    left: 63%;
+    top: 41%;
+    transform: translate(-63%, 41%);
+    width: 30px;
+    height: 30px;
   }
 }
 .home #contactMe .singleFish .openeye {
