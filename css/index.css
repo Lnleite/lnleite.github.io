@@ -157,16 +157,11 @@ html.sr .load-hidden {
 .navigation .nav .logo {
   color: #ffffff;
 }
-.navigation .nav .navFish {
-  position: absolute;
-  right: 0;
-  width: 40px;
-  clip-path: polygon(0 36%, 0 0, 100% 0, 100% 100%, 46% 100%, 0 100%, 30% 60%);
-}
 .navigation .nav .hamburger {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  cursor: pointer;
 }
 .navigation .nav .hamburger p {
   width: 35px;
@@ -174,40 +169,54 @@ html.sr .load-hidden {
   background-color: #ffffff;
   margin: 4px 0;
 }
-.navigation nav {
+.navigation .sideNav {
   display: none;
-  max-width: 800px;
+  position: absolute;
+  background: #a66429;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 100vh;
+}
+.navigation .sideNav .navFish {
+  cursor: pointer;
+  padding-top: 2px;
+  width: 40px;
+}
+.navigation .sideNav nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  flex-direction: column;
   justify-content: space-between;
 }
-.navigation nav a {
+.navigation .sideNav nav a {
   display: inline-block;
   color: #ffffff;
   text-decoration: none;
-  padding: 14px 6%;
-  background: #a66429;
-  clip-path: polygon(112% -38%, 72% 101%, 4% 103%, 37% 0%);
+  text-align: center;
+  width: 100%;
+  padding: 8px 0;
+  clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%);
   transition: all 1s ease;
 }
-@media (max-width: 751px) {
-  .navigation nav a {
-    padding: 14px 8%;
-  }
-}
-@media (max-width: 501px) {
-  .navigation nav a {
-    clip-path: none;
-    margin: 4px 0;
-    border-radius: 6px;
-  }
-}
-.navigation nav a:hover {
+.navigation .sideNav nav a:hover {
   color: #a66429;
   background: #ffffff;
-  clip-path: polygon(112% -38%, 72% 101%, 4% 103%, 37% 0%);
+  clip-path: polygon(100% 0%, 87% 100%, 0% 100%, 15% 0%);
 }
 @media (max-width: 501px) {
-  .navigation nav a:hover {
+  .navigation .sideNav nav a:hover {
     clip-path: none;
+  }
+}
+@keyframes eat {
+  0% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 110%, 0 120%, 40% 64%, 0 20%);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 110%, 0 60%, 40% 64%, 0 65%);
   }
 }
 header {

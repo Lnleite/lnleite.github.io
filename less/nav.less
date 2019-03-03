@@ -15,25 +15,11 @@
       color: @navColor;
     }
 
-    .navFish {
-      position: absolute;
-      right: 0;
-      width: 40px;
-      clip-path: polygon(
-        0 36%,
-        0 0,
-        100% 0,
-        100% 100%,
-        46% 100%,
-        0 100%,
-        30% 60%
-      );
-    }
-
     .hamburger {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
+      cursor: pointer;
 
       p {
         width: 35px;
@@ -44,39 +30,56 @@
     }
   }
 
-  nav {
+  .sideNav {
     display: none;
-    max-width: 800px;
-    justify-content: space-between;
+    position: absolute;
+    background: @Sienna;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 100vh;
 
-    a {
-      display: inline-block;
-      color: @navColor;
-      text-decoration: none;
-      padding: 14px 6%;
-      background: @Sienna;
-      clip-path: polygon(112% -38%, 72% 101%, 4% 103%, 37% 0%);
-      transition: all 1s ease;
+    .navFish {
+      cursor: pointer;
+      padding-top: 2px;
+      width: 40px;
+    }
 
-      @media @tablet {
-        padding: 14px 8%;
-      }
+    nav {
+      .center();
+      height: 80%;
+      flex-direction: column;
+      justify-content: space-between;
 
-      @media @phone {
-        clip-path: none;
-        margin: 4px 0;
-        border-radius: 6px;
-      }
+      a {
+        display: inline-block;
+        color: @navColor;
+        text-decoration: none;
+        text-align: center;
+        width: 100%;
+        padding: 8px 0;
+        clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%);
+        transition: all 1s ease;
 
-      &:hover {
-        color: @Sienna;
-        background: @navColor;
-        clip-path: polygon(112% -38%, 72% 101%, 4% 103%, 37% 0%);
+        &:hover {
+          color: @Sienna;
+          background: @navColor;
+          clip-path: polygon(100% 0%, 87% 100%, 0% 100%, 15% 0%);
 
-        @media @phone {
-          clip-path: none;
+          @media @phone {
+            clip-path: none;
+          }
         }
       }
     }
+  }
+}
+
+@keyframes eat {
+  0% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 110%, 0 120%, 40% 64%, 0 20%);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 110%, 0 60%, 40% 64%, 0 65%);
   }
 }
