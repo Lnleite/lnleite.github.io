@@ -181,7 +181,7 @@ html.sr .load-hidden {
   background: #a66429;
   top: 0;
   right: 0;
-  width: 150px;
+  width: 25vw;
   height: 100vh;
 }
 @media (max-width: 501px) {

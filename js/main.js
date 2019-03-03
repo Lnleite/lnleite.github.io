@@ -52,16 +52,7 @@ fish.addEventListener("mouseover", function(event) {
   });
 });
 
-//  Thinking about active nav areas
-// let url = window.location.href;
-// console.log(url);
-// let aTags = document.querySelectorAll("nav a");
-// aTags.forEach(function() {
-//   console.log(href);
-//   if (url == this.href) {
-//     console.log(this.href);
-//   }
-// });
+// Navigation
 const hamburger = document.querySelector(".hamburger");
 const fishNav = document.querySelector(".navFish");
 const sideNav = document.querySelector(".sideNav");
