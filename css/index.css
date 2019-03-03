@@ -261,7 +261,7 @@ header .jumboTxt {
   position: absolute;
   top: 35%;
   left: 10%;
-  color: #ffffff;
+  color: #fffbf5;
 }
 @media (max-width: 501px) {
   header .jumboTxt {
@@ -275,7 +275,7 @@ header .jumboTxt {
 header .jumboTxt h1 {
   font-size: 7rem;
   line-height: 1;
-  font-family: "YellowTail", cursive;
+  font-family: 'YellowTail', cursive;
 }
 @media (max-width: 751px) {
   header .jumboTxt h1 {
@@ -289,10 +289,10 @@ header .jumboTxt h1 {
   }
 }
 header .jumboTxt h1::after {
-  content: "Full Stack Web Developer";
+  content: 'Full Stack Web Developer';
   display: block;
   font-size: 2rem;
-  font-family: "Roboto", "Helvetica";
+  font-family: 'Roboto', 'Helvetica';
 }
 header .jumboTxt p {
   font-size: 2rem;
@@ -449,7 +449,7 @@ header .jumboTxt p {
   padding: 1px;
 }
 .home h2 {
-  font-family: 'Yellowtail';
+  font-family: 'Yellowtail', 'cursive';
 }
 .home .area {
   background: #cfc7bb;
@@ -478,7 +478,7 @@ header .jumboTxt p {
 }
 .home #projects a {
   text-decoration: none;
-  color: black;
+  color: #000000;
   margin: 0px 5%;
 }
 .home #projects h2 {
@@ -517,7 +517,7 @@ header .jumboTxt p {
   position: absolute;
   width: 260px;
   height: 400px;
-  background: #fff;
+  background: #fffbf5;
   backface-visibility: hidden;
 }
 .home #projects .pro .mappajob {
@@ -534,7 +534,7 @@ header .jumboTxt p {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: #fffbf5;
 }
 .home #projects .pro .poster h4 {
   z-index: 10;
@@ -552,7 +552,7 @@ header .jumboTxt p {
   border: 1px solid #cfc7bb;
   padding: 4%;
   background: #242427;
-  color: #fff;
+  color: #fffbf5;
 }
 .home #projects .pro .info p {
   margin-top: 10px;
@@ -649,7 +649,7 @@ header .jumboTxt p {
 }
 .home #contactMe {
   text-align: center;
-  color: #fff;
+  color: #fffbf5;
   padding: 15px 0 70px 0;
 }
 .home #contactMe .singleFish {
@@ -667,7 +667,7 @@ header .jumboTxt p {
   background-position: center;
 }
 .home #contactMe .singleFish .eye {
-  background: white;
+  background: #fffbf5;
   height: 50px;
   width: 50px;
   border-radius: 50%;
@@ -721,13 +721,9 @@ header .jumboTxt p {
 .home #contactMe .main p {
   font-size: 1.7rem;
 }
-.home #contactMe .main .email {
-  font-weight: bold;
-  color: #ff5757;
-}
 .home #contactMe .main i {
   font-size: 60px;
-  background: #fff;
+  background: #fffbf5;
   border-radius: 50%;
 }
 .home #contactMe .main .links {
@@ -735,7 +731,7 @@ header .jumboTxt p {
   justify-content: space-around;
 }
 .home #contactMe .main .links .fa-linkedin {
-  color: #0077b5;
+  color: #0074b2;
   clip-path: inset(4px 0px);
 }
 .home #contactMe .main .links .fa-twitter-square {
@@ -743,6 +739,6 @@ header .jumboTxt p {
   clip-path: inset(4px 0px);
 }
 .home #contactMe .main .links .fa-github {
-  color: #fff;
-  background: #000;
+  color: #fffbf5;
+  background: #000000;
 }
