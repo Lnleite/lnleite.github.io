@@ -620,6 +620,7 @@ header .jumboTxt p {
 .home #experience .exp .block .date {
   font-style: italic;
   font-size: 0.9rem;
+  margin: 7px 0;
 }
 .home #experience .exp .block .description {
   font-size: 1.1rem;
