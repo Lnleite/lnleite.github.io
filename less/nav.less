@@ -1,99 +1,83 @@
 .navigation {
-    position: fixed;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+
+  .nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     width: 100%;
-    z-index: 100;
+    padding: 0px 5%;
 
-    .nav {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      cursor: pointer;
+      padding-top: 40px;
+
+      p {
+        width: 35px;
+        height: 3px;
+        background-color: rgb(0, 0, 0);
+        margin: 4px 0;
+      }
+    }
+  }
+
+  .sideNav {
+    display: none;
+    position: absolute;
+    background: @sideBar;
+    top: 0;
+    right: 0;
+    width: 360px;
+    height: 100vh;
+
+    @media @phone {
+      width: 100vw;
+    }
+
+    .navFish {
+      cursor: pointer;
+      margin-top: 39px;
+      width: 40px;
+    }
+
+    nav {
+      .center();
+      height: 80%;
+      flex-direction: column;
+
+      a {
+        display: inline-block;
+        color: @navColor;
+        text-decoration: none;
+        text-align: center;
+        font-size: 1.5rem;
         width: 100%;
-        padding: 0px 5%;
+        padding: 20px 0;
+        transition: all 1s ease;
 
-        .hamburger {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            cursor: pointer;
-            padding-top: 40px;
+        &:hover {
+          color: @sideBar;
+          background: @blockColor;
 
-            p {
-                width: 35px;
-                height: 3px;
-                background-color: @navColor;
-                margin: 4px 0;
-            }
+          @media @phone {
+            clip-path: none;
+          }
         }
+      }
     }
-
-    .sideNav {
-        display: none;
-        position: absolute;
-        background: @sideBar;
-        top: 0;
-        right: 0;
-        width: 360px;
-        height: 100vh;
-
-        @media @phone {
-            width: 100vw;
-        }
-
-        .navFish {
-            cursor: pointer;
-            margin-top: 39px;
-            width: 40px;
-        }
-
-        nav {
-            .center();
-            height: 80%;
-            flex-direction: column;
-
-            a {
-                display: inline-block;
-                color: @navColor;
-                text-decoration: none;
-                text-align: center;
-                font-size: 1.5rem;
-                width: 100%;
-                padding: 20px 0;
-                transition: all 1s ease;
-
-                &:hover {
-                    color: @sideBar;
-                    background: @blockColor;
-
-                    @media @phone {
-                        clip-path: none;
-                    }
-                }
-            }
-        }
-    }
+  }
 }
 
 @keyframes eat {
-    0% {
-        clip-path: polygon(
-            0 0,
-            100% 0,
-            100% 100%,
-            0 110%,
-            0 120%,
-            40% 64%,
-            0 20%
-        );
-    }
-    100% {
-        clip-path: polygon(
-            0 0,
-            100% 0,
-            100% 100%,
-            0 110%,
-            0 60%,
-            40% 64%,
-            0 65%
-        );
-    }
+  0% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 110%, 0 120%, 40% 64%, 0 20%);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 110%, 0 60%, 40% 64%, 0 65%);
+  }
 }

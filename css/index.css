@@ -183,7 +183,7 @@ html.sr .load-hidden {
 .navigation .nav .hamburger p {
   width: 35px;
   height: 3px;
-  background-color: rgba(255, 251, 245, 0.9);
+  background-color: #000000;
   margin: 4px 0;
 }
 .navigation .sideNav {
