@@ -460,21 +460,10 @@ header .jumboTxt p {
   background: rgba(255, 251, 245, 0.9);
   padding: 40px;
 }
-.home #about .main {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-@media (max-width: 751px) {
-  .home #about .main {
-    flex-direction: column;
-  }
-}
 .home #about .main p {
   font-size: 1.5rem;
   line-height: 1.5;
   padding-top: 20px;
-  font-weight: bold;
 }
 .home #projects a {
   text-decoration: none;
