@@ -13,14 +13,12 @@ let slideLeft = {
     origin: 'left',
     opacity: 0,
     delay: '400',
-    duration: '1500',
 };
 let slideRight = {
     distance: '150%',
     origin: 'right',
     opacity: 0,
     delay: '400',
-    duration: '1500',
 };
 
 ScrollReveal().reveal('.left', slideLeft);
@@ -82,16 +80,19 @@ const hamburger = document.querySelector('.hamburger');
 const fishNav = document.querySelector('.navFish');
 const sideNav = document.querySelector('.sideNav');
 const sections = document.querySelectorAll('nav a');
+const home = document.querySelector('.home');
+const header = document.querySelector('header');
 
 hamburger.addEventListener('click', function() {
     let tl = new TimelineLite();
     sideNav.style.display = 'block';
-    tl.to(hamburger, 0.2, {
+    open = true;
+    tl.to(hamburger, 0.1, {
         scale: 0.7,
     })
         .fromTo(
             sideNav,
-            1.5,
+            0.75,
             {
                 x: '100%',
             },
@@ -105,7 +106,19 @@ hamburger.addEventListener('click', function() {
                 },
             }
         )
-        .to(hamburger, 0.5, { display: 'none' }, '-=1.6');
+        .to(hamburger, 0.5, { display: 'none' }, '-=1');
+});
+
+home.addEventListener('click', function() {
+    if (open) {
+        closeNav();
+    }
+});
+
+header.addEventListener('click', function() {
+    if (open) {
+        closeNav();
+    }
 });
 
 fishNav.addEventListener('click', closeNav);
@@ -117,8 +130,8 @@ sections.forEach(el => {
 function closeNav() {
     let tl = new TimelineLite();
     tl.to(hamburger, 0.01, { scale: 1 })
-        .to(fishNav, 1, { x: -30, rotationY: 180 })
-        .to(sideNav, 1.5, { x: '120%' })
+        .to(fishNav, 0.5, { x: -30, rotationY: 180 })
+        .to(sideNav, 0.75, { x: '120%' })
         .to(hamburger, 0.5, { display: 'flex' }, '-=1')
         .to(fishNav, 0.01, { rotationY: 0, x: 0 });
 }

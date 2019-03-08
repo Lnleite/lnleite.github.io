@@ -183,7 +183,7 @@ html.sr .load-hidden {
 .navigation .nav .hamburger p {
   width: 35px;
   height: 3px;
-  background-color: rgba(255, 251, 245, 0.9);
+  background-color: #000000;
   margin: 4px 0;
 }
 .navigation .sideNav {
@@ -449,7 +449,7 @@ header .jumboTxt p {
   padding: 1px;
 }
 .home h2 {
-  font-family: 'Yellowtail', 'cursive';
+  font-family: "Yellowtail", "cursive";
 }
 .home .area {
   background: #cfc7bb;
@@ -460,21 +460,10 @@ header .jumboTxt p {
   background: rgba(255, 251, 245, 0.9);
   padding: 40px;
 }
-.home #about .main {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-@media (max-width: 751px) {
-  .home #about .main {
-    flex-direction: column;
-  }
-}
 .home #about .main p {
   font-size: 1.5rem;
   line-height: 1.5;
   padding-top: 20px;
-  font-weight: bold;
 }
 .home #projects a {
   text-decoration: none;
@@ -572,7 +561,7 @@ header .jumboTxt p {
   padding: 0 2%;
 }
 .home #projects .pro::after {
-  content: '';
+  content: "";
   width: 260px;
   height: 260px;
   position: absolute;
@@ -620,6 +609,7 @@ header .jumboTxt p {
 .home #experience .exp .block .date {
   font-style: italic;
   font-size: 0.9rem;
+  margin: 7px 0;
 }
 .home #experience .exp .block .description {
   font-size: 1.1rem;
