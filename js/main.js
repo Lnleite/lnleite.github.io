@@ -41,9 +41,6 @@ window.onscroll = function() {
     let offset = d.scrollTop + window.innerHeight;
     let height = d.offsetHeight;
 
-    console.log('offset = ' + offset);
-    console.log('height = ' + height);
-
     if (offset === height) {
         if (offset === height) {
             eye.classList.add('openeye');
