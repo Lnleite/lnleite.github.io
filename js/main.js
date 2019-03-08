@@ -38,6 +38,31 @@ function swim() {
     }
 }
 
+window.onscroll = function() {
+    let d = document.documentElement;
+    let offset = d.scrollTop + window.innerHeight;
+    let height = d.offsetHeight;
+
+    console.log('offset = ' + offset);
+    console.log('height = ' + height);
+
+    if (offset === height) {
+        if (offset === height) {
+            eye.classList.add('openeye');
+            TweenLite.to(fish, 8, {
+                onStart: swim,
+                ease: Circ.ease,
+                x: '100%',
+                delay: 1,
+                onComplete: function() {
+                    fish.classList.remove('swimAngler');
+                    fish.style.opacity = 0;
+                },
+            });
+        }
+    }
+};
+
 fish.addEventListener('mouseover', function(event) {
     eye.classList.add('openeye');
     TweenLite.to(fish, 8, {
