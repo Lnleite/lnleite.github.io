@@ -43,22 +43,11 @@ window.onscroll = function() {
 
     if (offset === height) {
         if (offset === height) {
-            eye.classList.add('openeye');
-            TweenLite.to(fish, 8, {
-                onStart: swim,
-                ease: Circ.ease,
-                x: '100%',
-                delay: 1,
-                onComplete: function() {
-                    fish.classList.remove('swimAngler');
-                    fish.style.opacity = 0;
-                },
-            });
         }
     }
 };
 
-fish.addEventListener('mouseover', function(event) {
+function anglerMove() {
     eye.classList.add('openeye');
     TweenLite.to(fish, 8, {
         onStart: swim,
@@ -70,6 +59,26 @@ fish.addEventListener('mouseover', function(event) {
             fish.style.opacity = 0;
         },
     });
+}
+
+window.onscroll = function() {
+    let pageHeight = document.documentElement.offsetHeight,
+        windowHeight = window.innerHeight,
+        scrollPosition =
+            window.scrollY ||
+            window.pageYOffset ||
+            document.body.scrollTop +
+                ((document.documentElement &&
+                    document.documentElement.scrollTop) ||
+                    0);
+
+    if (pageHeight <= windowHeight + scrollPosition) {
+        anglerMove();
+    }
+};
+
+fish.addEventListener('mouseover', function() {
+    anglerMove();
 });
 
 // Navigation
