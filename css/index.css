@@ -449,7 +449,7 @@ header .jumboTxt p {
   padding: 1px;
 }
 .home h2 {
-  font-family: "Yellowtail", "cursive";
+  font-family: 'Yellowtail', 'cursive';
 }
 .home .area {
   background: #cfc7bb;
@@ -458,7 +458,12 @@ header .jumboTxt p {
   position: relative;
   z-index: 5;
   background: rgba(255, 251, 245, 0.9);
-  padding: 40px;
+  padding: 40px 12%;
+}
+@media (max-width: 501px) {
+  .home .area {
+    padding: 40px 5%;
+  }
 }
 .home #about .main p {
   font-size: 1.5rem;
@@ -487,7 +492,7 @@ header .jumboTxt p {
 .home #projects .project {
   width: 260px;
   height: 400px;
-  margin: 30px 6%;
+  margin: 30px 6% 30px 0;
   float: left;
   perspective: 1000px;
 }
@@ -561,7 +566,7 @@ header .jumboTxt p {
   padding: 0 2%;
 }
 .home #projects .pro::after {
-  content: "";
+  content: '';
   width: 260px;
   height: 260px;
   position: absolute;
@@ -586,6 +591,11 @@ header .jumboTxt p {
 }
 .home #projects .pro:hover .info {
   box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0);
+}
+@media (max-width: 501px) {
+  .home #experience h2 {
+    font-size: 4.7rem;
+  }
 }
 .home #experience .exp {
   display: flex;
