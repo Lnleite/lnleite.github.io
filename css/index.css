@@ -520,6 +520,9 @@ header .jumboTxt p {
 .home #projects .pro .lambdanotes {
   background-image: url(../images/lambdaNotesImg.PNG);
 }
+.home #projects .pro .oerbookr {
+  background-image: url(../images/OERBookr.PNG);
+}
 .home #projects .pro .poster {
   transform: translateZ(130px);
   background-size: cover;
