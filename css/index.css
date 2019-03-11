@@ -458,12 +458,7 @@ header .jumboTxt p {
   position: relative;
   z-index: 5;
   background: rgba(255, 251, 245, 0.9);
-  padding: 40px 12%;
-}
-@media (max-width: 501px) {
-  .home .area {
-    padding: 40px 5%;
-  }
+  padding: 40px 5%;
 }
 .home #about .main p {
   font-size: 1.5rem;
@@ -503,9 +498,6 @@ header .jumboTxt p {
   transform: translateZ(-130px);
   transition: transform 350ms 200ms;
 }
-.home #projects .pro:hover {
-  transform: rotateY(-78deg) translateZ(20px);
-}
 .home #projects .pro .poster,
 .home #projects .pro .info {
   position: absolute;
@@ -522,6 +514,7 @@ header .jumboTxt p {
 }
 .home #projects .pro .oerbookr {
   background-image: url(../images/OERBookr.PNG);
+  background-position: center;
 }
 .home #projects .pro .poster {
   transform: translateZ(130px);
@@ -567,6 +560,9 @@ header .jumboTxt p {
 }
 .home #projects .pro .info .skills p {
   padding: 0 2%;
+}
+.home #projects .pro:hover {
+  transform: rotateY(-78deg) translateZ(20px);
 }
 .home #projects .pro::after {
   content: '';
