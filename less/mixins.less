@@ -18,3 +18,9 @@
   display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
   display: flex;
 }
+
+.transform(@properties) {
+  -webkit-transform: @properties; /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+  -ms-transform: @properties; /* IE 9 */
+  transform: @properties;
+}

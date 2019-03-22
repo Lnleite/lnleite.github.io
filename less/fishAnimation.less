@@ -37,7 +37,7 @@
     top: 0;
     width: 100px;
     .swimMoveAnimation(15s, normal, 7s);
-    transform: scaleX(-1);
+    .transform(scaleX(-1));
 
     @media @phone {
       .swimMoveAnimation(7s, normal, 7s);
@@ -59,7 +59,7 @@
     top: 85%;
     width: 300px;
     .swimMoveAnimation(15s, reverse, 2s);
-    transform: rotate(-15deg);
+    .transform(rotate(-15deg));
 
     @media @phone {
       .swimMoveAnimation(7s, reverse, 2s);
@@ -90,7 +90,7 @@
     top: 0;
     .swimMoveAnimation(15s, normal);
     width: 330px;
-    transform: scale(1.3);
+    .transform(scale(1.3));
 
     @media @phone {
       top: -5%;
@@ -125,7 +125,7 @@
   .whale {
     top: 80%;
     .swimMoveAnimation(15s, reverse);
-    transform: scale(3) scaleX(-1);
+    .transform(scale(3) scaleX(-1));
 
     @media @phone {
       .swimMoveAnimation(7s, reverse, 4s);

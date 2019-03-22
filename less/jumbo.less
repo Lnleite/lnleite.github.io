@@ -1,62 +1,62 @@
 header {
-    position: relative;
+  position: relative;
 
-    .jumboImg {
-        background-image: url(../images/jumboImg.jpg);
-        filter: none;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-attachment: fixed;
-        min-height: 100vh;
+  .jumboImg {
+    background-image: url(../images/jumboImg.jpg);
+    filter: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
 
-        transition: background-image 1s ease, filter 1s ease;
+    transition: background-image 1s ease, filter 1s ease;
+  }
+
+  .loading {
+    background-color: #2e69b7;
+    background-image: url(../images/compressImg.jpg);
+    filter: blur(0px);
+  }
+
+  .jumboTxt {
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    color: rgb(255, 251, 245);
+
+    @media @phone {
+      text-align: center;
+      margin: 0 auto;
+      left: 10%;
+      padding: 0 2%;
+      .transform(translate(-5%, 0));
     }
 
-    .loading {
-        background-color: #2e69b7;
-        background-image: url(../images/compressImg.jpg);
-        filter: blur(0px);
+    h1 {
+      font-size: 7rem;
+      line-height: 1;
+      font-family: "YellowTail", cursive;
+
+      @media @tablet {
+        font-size: 5rem;
+      }
+
+      @media @phone {
+        font-size: 5rem;
+        padding-bottom: 5px;
+      }
+
+      &::after {
+        content: "Full Stack Web Developer";
+        display: block;
+        font-size: 2rem;
+        font-family: "Roboto", "Helvetica";
+      }
     }
 
-    .jumboTxt {
-        position: absolute;
-        top: 35%;
-        left: 10%;
-        color: rgb(255, 251, 245);
-
-        @media @phone {
-            text-align: center;
-            margin: 0 auto;
-            left: 10%;
-            padding: 0 2%;
-            transform: translate(-5%, 0);
-        }
-
-        h1 {
-            font-size: 7rem;
-            line-height: 1;
-            font-family: 'YellowTail', cursive;
-
-            @media @tablet {
-                font-size: 5rem;
-            }
-
-            @media @phone {
-                font-size: 5rem;
-                padding-bottom: 5px;
-            }
-
-            &::after {
-                content: 'Full Stack Web Developer';
-                display: block;
-                font-size: 2rem;
-                font-family: 'Roboto', 'Helvetica';
-            }
-        }
-
-        p {
-            font-size: 2rem;
-        }
+    p {
+      font-size: 2rem;
     }
+  }
 }

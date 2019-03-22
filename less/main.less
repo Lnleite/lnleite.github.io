@@ -62,7 +62,7 @@
       width: 260px;
       height: 400px;
       transform-style: preserve-3d;
-      transform: translateZ(-130px);
+      .transform(translateZ(-130px));
       transition: transform 350ms 200ms;
     }
 
@@ -90,7 +90,7 @@
       }
 
       .poster {
-        transform: translateZ(130px);
+        .transform(translateZ(130px));
         background-size: cover;
         background-repeat: no-repeat;
         box-shadow: inset 0px 0px 40px rgba(255, 255, 255, 0);
@@ -112,7 +112,7 @@
       }
 
       .info {
-        transform: rotateY(90deg) translateZ(130px);
+        .transform(rotateY(90deg) translateZ(130px));
         border: 1px solid @Silver;
         padding: 4%;
         background: @DarkSlateGray;
@@ -141,7 +141,7 @@
       }
 
       &:hover {
-        transform: rotateY(-78deg) translateZ(20px);
+        .transform(rotateY(-78deg) translateZ(20px));
       }
 
       &::after {
@@ -152,7 +152,7 @@
         bottom: 0;
         box-shadow: 0 30px 50px rgba(0, 0, 0, 0.3);
         transform-origin: 100% 100%;
-        transform: rotateX(90deg) translateY(130px);
+        .transform(rotateX(90deg) translateY(130px));
         transition: box-shadow 350ms 200ms;
       }
 
@@ -271,7 +271,7 @@
         position: absolute;
         top: 37%;
         left: 57%;
-        transform: translate(-57%, -37%);
+        .transform(translate(-57%, -37%));
         clip-path: inset(30px 0px);
 
         transition: clip-path 1s ease;
@@ -279,13 +279,13 @@
         @media @tablet {
           left: 68%;
           top: 40%;
-          transform: translate(-68%, 0%);
+          .transform(translate(-68%, 0%));
         }
 
         @media @phone {
           left: 63%;
           top: 41%;
-          transform: translate(-63%, 41%);
+          .transform(translate(-63%, 41%));
           width: 30px;
           height: 30px;
         }
