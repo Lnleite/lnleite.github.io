@@ -449,7 +449,7 @@ header .jumboTxt p {
   padding: 1px;
 }
 .home h2 {
-  font-family: "Yellowtail", "cursive";
+  font-family: 'Yellowtail', 'cursive';
 }
 .home .area {
   background: #cfc7bb;
@@ -458,7 +458,7 @@ header .jumboTxt p {
   position: relative;
   z-index: 5;
   background: rgba(255, 251, 245, 0.9);
-  padding: 40px;
+  padding: 40px 5%;
 }
 .home #about .main p {
   font-size: 1.5rem;
@@ -487,7 +487,7 @@ header .jumboTxt p {
 .home #projects .project {
   width: 260px;
   height: 400px;
-  margin: 30px 6%;
+  margin: 30px 6% 30px 0;
   float: left;
   perspective: 1000px;
 }
@@ -497,9 +497,6 @@ header .jumboTxt p {
   transform-style: preserve-3d;
   transform: translateZ(-130px);
   transition: transform 350ms 200ms;
-}
-.home #projects .pro:hover {
-  transform: rotateY(-78deg) translateZ(20px);
 }
 .home #projects .pro .poster,
 .home #projects .pro .info {
@@ -514,6 +511,10 @@ header .jumboTxt p {
 }
 .home #projects .pro .lambdanotes {
   background-image: url(../images/lambdaNotesImg.PNG);
+}
+.home #projects .pro .oerbookr {
+  background-image: url(../images/OERBookr.PNG);
+  background-position: center;
 }
 .home #projects .pro .poster {
   transform: translateZ(130px);
@@ -560,8 +561,11 @@ header .jumboTxt p {
 .home #projects .pro .info .skills p {
   padding: 0 2%;
 }
+.home #projects .pro:hover {
+  transform: rotateY(-78deg) translateZ(20px);
+}
 .home #projects .pro::after {
-  content: "";
+  content: '';
   width: 260px;
   height: 260px;
   position: absolute;
@@ -586,6 +590,11 @@ header .jumboTxt p {
 }
 .home #projects .pro:hover .info {
   box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0);
+}
+@media (max-width: 501px) {
+  .home #experience h2 {
+    font-size: 4.7rem;
+  }
 }
 .home #experience .exp {
   display: flex;
