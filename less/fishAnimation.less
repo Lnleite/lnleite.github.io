@@ -11,150 +11,134 @@
 
   .jellyfish {
     top: 0;
-    animation: SwimUpDown 1.5s infinite alternate,
-      MoveOnScreen 30s linear infinite alternate;
+    .swimMoveAnimation(30s, reverse);
 
     @media @phone {
-      animation: SwimUpDown 1.5s infinite alternate,
-        MoveOnScreen 15s linear infinite alternate;
+      .swimMoveAnimation(15s, reverse);
     }
   }
 
   .normFish2 {
     top: 40%;
-    animation: SwimUpDown 1.5s infinite alternate,
-      MoveOnScreen 15s 4s infinite normal;
+    .swimMoveAnimation(15s, normal);
   }
 
   .dolphin {
     top: 80%;
     width: 250px;
-    animation: SwimUpDown 1.5s infinite alternate,
-      MoveOnScreen 15s 5s infinite reverse;
+    .swimMoveAnimation(15s, reverse, 5s);
 
     @media @phone {
-      animation: SwimUpDown 1.5s infinite alternate,
-        MoveOnScreen 7s 5s infinite reverse;
+      .swimMoveAnimation(7s, reverse, 5s);
     }
   }
 
   .puffer {
     top: 0;
     width: 100px;
-    animation: SwimUpDown 1.5s infinite alternate,
-      MoveOnScreen 15s 7s linear infinite normal;
-    transform: scaleX(-1);
+    .swimMoveAnimation(15s, normal, 7s);
+    .transform(scaleX(-1));
 
     @media @phone {
-      animation: SwimUpDown 1.5s infinite alternate,
-        MoveOnScreen 7s 7s linear infinite normal;
+      .swimMoveAnimation(7s, normal, 7s);
     }
   }
 
   .school {
     top: 20%;
     width: 250px;
-    animation: SwimUpDown 1.5s infinite alternate,
-      MoveOnScreen 15s infinite normal;
+    .swimMoveAnimation(15s, normal);
   }
 
   .spiny {
     top: 50%;
-    //   width: 0px;
-    animation: SwimUpDown 1.5s infinite alternate,
-      MoveOnScreen 15s 3s infinite reverse;
+    .swimMoveAnimation(15s, reverse, 2s);
   }
 
   .sword {
     top: 85%;
     width: 300px;
-    animation: SwimUpDown 1.5s infinite alternate,
-      MoveOnScreen 15s 2s linear infinite reverse;
-    transform: rotate(-15deg);
+    .swimMoveAnimation(15s, reverse, 2s);
+    .transform(rotate(-15deg));
 
     @media @phone {
-      animation: SwimUpDown 1.5s infinite alternate,
-        MoveOnScreen 7s 2s linear infinite reverse;
+      .swimMoveAnimation(7s, reverse, 2s);
     }
   }
 
   .normFish3 {
     top: 0;
-    animation: SwimUpDown 1.5s infinite alternate,
-      MoveOnScreen 15s 5s linear infinite normal;
+    .swimMoveAnimation(15s, normal, 5s);
 
     @media @phone {
-      animation: SwimUpDown 1.5s infinite alternate,
-        MoveOnScreen 7s 5s linear infinite normal;
+      .swimMoveAnimation(7s, normal, 5s);
     }
   }
 
   .seahorse {
     width: 90px;
     top: 70%;
-    animation: SwimUpDown 1.5s infinite alternate,
-      MoveOnScreen 15s 5s linear infinite reverse;
+    .swimMoveAnimation(15s, reverse, 5s);
 
     @media @phone {
       top: 80%;
-      animation: SwimUpDown 1.5s infinite alternate,
-        MoveOnScreen 7s 5s linear infinite reverse;
+      .swimMoveAnimation(7s, reverse, 5s);
     }
   }
 
   .shark {
     top: 0;
-    animation: SwimUpDown 1.5s infinite alternate,
-      MoveOnScreen 15s linear infinite normal;
+    .swimMoveAnimation(15s, normal);
     width: 330px;
-    transform: scale(1.3);
+    .transform(scale(1.3));
 
     @media @phone {
       top: -5%;
       height: 410px;
-      animation: SwimUpDown 1.5s infinite alternate,
-        MoveOnScreen 9s 2s linear infinite normal;
+      .swimMoveAnimation(9s, normal, 2s);
     }
   }
 
   .normFish {
     top: 20%;
-    animation: SwimUpDown 1.5s infinite alternate,
-      MoveOnScreen 15s linear infinite normal;
+    .swimMoveAnimation(15s, normal);
   }
 
   .bass {
     top: 0;
-    animation: SwimUpDown 1.5s infinite alternate,
-      MoveOnScreen 15s linear infinite reverse;
+    .swimMoveAnimation(15s, reverse);
 
     @media @phone {
-      animation: SwimUpDown 1.5s infinite alternate,
-        MoveOnScreen 7s linear infinite reverse;
+      .swimMoveAnimation(7s, reverse);
     }
   }
 
   .norm {
     top: 10%;
-    animation: SwimUpDown 1.5s infinite alternate,
-      MoveOnScreen 15s 2s linear infinite normal;
+    .swimMoveAnimation(15s, normal, 2s);
 
     @media @phone {
-      animation: SwimUpDown 1.5s infinite alternate,
-        MoveOnScreen 7s 2s linear infinite normal;
+      .swimMoveAnimation(7s, normal, 2s);
     }
   }
 
   .whale {
     top: 80%;
-    animation: SwimUpDown 1.5s infinite alternate,
-      MoveOnScreen 15s linear infinite reverse;
-    transform: scale(3) scaleX(-1);
+    .swimMoveAnimation(15s, reverse);
+    .transform(scale(3) scaleX(-1));
 
     @media @phone {
-      animation: SwimUpDown 1.5s infinite alternate,
-        MoveOnScreen 7s 4s linear infinite reverse;
+      .swimMoveAnimation(7s, reverse, 4s);
     }
+  }
+}
+
+@-webkit-keyframes SwimUpDown {
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: 25px;
   }
 }
 
@@ -164,6 +148,18 @@
   }
   100% {
     margin-top: 25px;
+  }
+}
+
+@-webkit-keyframes MoveOnScreen {
+  0% {
+    opacity: 1;
+    margin-left: -70%;
+  }
+
+  100% {
+    margin-left: 120%;
+    opacity: 1;
   }
 }
 

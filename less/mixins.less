@@ -1,11 +1,26 @@
 .center() {
-  display: flex;
+  .flex();
   justify-content: center;
   align-items: center;
 }
 
-// Animation as mixin?
-// .swimMoveAnimation() {
-//   animation: SwimUpDown 1.5s infinite alternate,
-//       MoveOnScreen 30s linear infinite alternate;
-// }
+.swimMoveAnimation(@time, @direction, @delay: 0s) {
+  -webkit-animation: SwimUpDown 1.5s infinite alternate,
+    MoveOnScreen @time @delay linear infinite @direction;
+
+  animation: SwimUpDown 1.5s infinite alternate,
+    MoveOnScreen @time @delay linear infinite @direction;
+}
+
+.flex() {
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex;
+}
+
+.transform(@properties) {
+  -webkit-transform: @properties; /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+  -ms-transform: @properties; /* IE 9 */
+  transform: @properties;
+}
